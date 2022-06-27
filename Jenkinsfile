@@ -13,7 +13,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                  sh '''
+                      npm -v
+                      npm i -D @playwright/test
+                      npx playwright install
+                    '''
             }
         }
         stage('Test') {
