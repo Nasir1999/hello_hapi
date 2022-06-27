@@ -15,7 +15,7 @@ pipeline {
                 echo 'Building...'
                   sh '''
                       npm -v
-                      npx  playwright install --unsafe-perm
+                      npx playwright install
                     '''
             }
         }
