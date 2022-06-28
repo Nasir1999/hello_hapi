@@ -8,7 +8,9 @@ pipeline {
             args '-u root:root'
         }
     }
-
+     environment {
+        HOME = '.'
+    }
     stages {
         stage('Build') {
             steps {
